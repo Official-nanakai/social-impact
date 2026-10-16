@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Impact · Astana Hub</title>
+<meta name="description" content="Гайд для резидентов Astana Hub: как набирать Social Tokens, добавлять сотрудников и правильно подавать заявки.">
+<meta property="og:title" content="Social Impact · гайд для резидентов Astana Hub">
+<meta property="og:description" content="Social Tokens, Лиги, Грейды, заявки на мероприятия и полезные ссылки — в одном месте.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23173F2E'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='16' font-weight='700' text-anchor='middle' fill='%23E8743B'%3EST%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --green:#173F2E; --green-2:#24573F; --green-3:#3E7A5C; --green-soft:#E6EEE9;
+  --orange:#C4561F; --orange-2:#E8743B; --orange-soft:#FBEDE4;
+  --bg:#F4F5F3; --card:#FFFFFF; --card-2:#EEF1EE; --line:#DDE3DE;
+  --ink:#16201B; --ink-2:#4A5650; --ink-3:#7A857F;
+  --red:#C0392B; --yellow:#E2B33C; --ok:#2E8B57;
+  --r:18px; --r-sm:12px;
+  --serif:"Source Serif 4", Georgia, serif;
+  --sans:Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --shadow:0 1px 2px rgba(23,63,46,.06), 0 8px 24px rgba(23,63,46,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(26px,4vw,36px)}
+h3{font-size:19px}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--orange)}
+.muted{color:var(--ink-2)}
+.small{font-size:13px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(244,245,243,.86);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:12px;height:56px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;white-space:nowrap}
+.brand-dot{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff 0 18%,var(--green) 19% 100%)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;margin:0 4px}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:13px;font-weight:500;text-decoration:none;color:var(--ink-2);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.nav a:hover{background:var(--card-2);color:var(--ink)}
+.lang{display:flex;background:var(--card-2);border-radius:999px;padding:3px;flex-shrink:0}
+.lang button{border:0;background:transparent;font:600 12px var(--sans);padding:6px 10px;border-radius:999px;cursor:pointer;color:var(--ink-2)}
+.lang button[aria-pressed="true"]{background:var(--green);color:#fff}
+
+/* hero */
+.hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,116,59,.35),transparent 65%);pointer-events:none}
+.hero .wrap{padding-top:48px;padding-bottom:40px;position:relative;z-index:1}
+.hero h1{font-size:clamp(40px,8vw,72px);margin:10px 0 12px}
+.hero .lead{font-size:clamp(16px,2.2vw,19px);color:rgba(255,255,255,.82);max-width:620px}
+.hero .eyebrow{color:var(--orange-2)}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
+.lk{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--r);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);text-decoration:none;color:#fff;transition:background .15s,transform .15s}
+.lk:hover{background:rgba(255,255,255,.15);transform:translateY(-1px)}
+.lk.primary{background:var(--orange);border-color:var(--orange)}
+.lk.primary:hover{background:var(--orange-2)}
+.lk .ic{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.14);display:grid;place-items:center;flex-shrink:0}
+.lk .ic svg{width:20px;height:20px}
+.lk b{display:block;font-weight:600;font-size:15px}
+.lk span.sub{display:block;font-size:12.5px;color:rgba(255,255,255,.72);margin-top:1px}
+.lk .arr{margin-left:auto;opacity:.7;flex-shrink:0}
+
+/* sections */
+section{padding:64px 0 8px}
+.sec-head{margin-bottom:24px;max-width:720px}
+.sec-head .eyebrow{display:block;margin-bottom:8px}
+.sec-head p{margin-top:10px;color:var(--ink-2)}
+.grid{display:grid;gap:12px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--card);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.card.soft{background:var(--card-2);box-shadow:none}
+.card.dark{background:var(--green);color:#fff}
+.card.dark .muted{color:rgba(255,255,255,.75)}
+.num{font-family:var(--serif);font-weight:700;color:var(--orange);font-size:22px}
+.card h3{margin:6px 0 6px}
+.st{font-family:var(--serif);font-weight:700;color:var(--orange);font-size:20px;margin-top:10px}
+.st small{font-family:var(--sans);font-size:11px;font-weight:600;color:var(--ink-3);margin-left:3px}
+.block{margin-top:28px}
+.block > h3{margin-bottom:12px}
+.note{font-size:13px;color:var(--ink-3);margin-top:12px}
+
+/* leagues */
+.leagues{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end;height:280px}
+.lg{border-radius:14px 14px 10px 10px;padding:12px;display:flex;flex-direction:column;justify-content:space-between;min-height:84px}
+.lg .nm{font-family:var(--serif);font-weight:700;font-size:24px}
+.lg .em{font-size:12px;color:var(--ink-2)}
+.lg .pl{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--orange)}
+.lg .pl small{font-size:11px;font-family:var(--sans);color:var(--ink-3)}
+.grades{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.gr{border-radius:12px;padding:12px 10px;font-size:13px}
+.gr b{font-family:var(--serif);font-size:22px;display:block}
+.gr .ix{font-weight:600;margin-top:8px;color:var(--orange)}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;counter-reset:f}
+.flow .card{position:relative;padding-top:44px}
+.flow .card::before{counter-increment:f;content:counter(f);position:absolute;top:14px;left:20px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font:600 12px/24px var(--sans);text-align:center}
+.flow .card:last-child::before{background:var(--orange)}
+.meter{height:10px;border-radius:99px;background:linear-gradient(90deg,var(--red),var(--yellow) 45%,var(--ok));margin:14px 0}
+.lvl{display:flex;justify-content:space-between;font-size:14px;padding:6px 0;border-bottom:1px solid var(--line)}
+.lvl:last-child{border:0}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{padding:9px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl thead th{font-size:12px;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.scroll-x{overflow-x:auto}
+
+/* year */
+.yr-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.yr-row:last-child{border:0}
+.yr-row b{font-family:var(--serif);font-size:22px;color:var(--orange-2)}
+.split{border-left:4px solid var(--ok)}
+.split.bad{border-left-color:var(--orange)}
+
+/* employee carousel */
+.phases{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.phase{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 14px;font:600 14px var(--sans);cursor:pointer;color:var(--ink-2);display:flex;gap:8px;align-items:center}
+.phase .pn{width:22px;height:22px;border-radius:50%;background:var(--card-2);display:grid;place-items:center;font-size:12px}
+.phase[aria-selected="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.phase[aria-selected="true"] .pn{background:var(--orange);color:#fff}
+.carousel{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.stage{position:relative;background:#F6F2EC;aspect-ratio:1400/787;touch-action:pan-y}
+.stage img{width:100%;height:100%;object-fit:contain;cursor:zoom-in}
+.navbtn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(23,63,46,.85);color:#fff;cursor:pointer;display:grid;place-items:center}
+.navbtn:disabled{opacity:.25;cursor:default}
+.navbtn.prev{left:10px}.navbtn.next{right:10px}
+.cap{display:flex;gap:14px;align-items:flex-start;padding:16px 20px}
+.cap .count{font:600 12px var(--sans);background:var(--card-2);border-radius:999px;padding:4px 10px;white-space:nowrap;color:var(--ink-2)}
+.cap p{font-size:15px}
+.dots{display:flex;gap:6px;padding:0 20px 18px;flex-wrap:wrap}
+.dots button{width:8px;height:8px;border-radius:99px;border:0;background:var(--line);padding:0;cursor:pointer;transition:width .2s}
+.dots button[aria-current="true"]{width:22px;background:var(--orange)}
+.dots button.sep{margin-left:8px}
+.warn{display:flex;gap:10px;align-items:center;background:var(--orange-soft);color:#7A3410;border-radius:var(--r-sm);padding:12px 14px;font-size:14px;font-weight:500;margin-bottom:14px}
+
+/* event */
+.err{display:flex;gap:14px}
+.err .x{width:34px;height:34px;border-radius:10px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;flex-shrink:0;font-weight:700}
+.err h3{font-size:17px;margin:2px 0 4px}
+.err p{font-size:14px;color:var(--ink-2)}
+.check{background:var(--green);color:#fff;border-radius:var(--r);padding:22px}
+.check h3{color:#fff}
+.bar{height:8px;background:rgba(255,255,255,.15);border-radius:99px;margin:14px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--orange-2);transition:width .25s}
+.ci{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14);cursor:pointer}
+.ci:last-of-type{border:0}
+.ci input{appearance:none;width:22px;height:22px;border-radius:7px;border:2px solid rgba(255,255,255,.5);flex-shrink:0;margin:1px 0 0;cursor:pointer;display:grid;place-items:center}
+.ci input:checked{background:var(--orange-2);border-color:var(--orange-2)}
+.ci input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.ci input:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.ci span{font-size:15px}
+.ci small{display:block;color:rgba(255,255,255,.65);font-size:13px;margin-top:2px}
+.done{display:none;margin-top:14px;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;font-weight:600}
+.check.all .done{display:block}
+.steps-ol{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps-ol li{display:flex;gap:12px;font-size:15px}
+.steps-ol .n{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font:600 13px/26px var(--sans);text-align:center;flex-shrink:0}
+.steps-ol li p{color:var(--ink-2);font-size:14px}
+
+/* contacts */
+.contact{display:flex;align-items:center;gap:14px;text-decoration:none;padding:16px 18px}
+.contact:hover{outline:2px solid var(--green-3)}
+.contact .ic{width:42px;height:42px;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center;flex-shrink:0}
+.contact b{display:block}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 8px;border-radius:99px;background:var(--orange-soft);color:var(--orange);margin-left:6px;vertical-align:2px}
+.phones{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.phones a{text-decoration:none;background:var(--card-2);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:500}
+.phones a:hover{background:var(--green-soft)}
+
+/* instagram */
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{aspect-ratio:1;border-radius:var(--r);position:relative;overflow:hidden;text-decoration:none;color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s, box-shadow .2s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(23,63,46,.25)}
+.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.18),transparent 45%);pointer-events:none}
+.tile .kind{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:rgba(0,0,0,.18);padding:5px 10px;border-radius:99px;align-self:flex-start}
+.tile .kind svg{width:14px;height:14px}
+.tile .big{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.6vw,28px);line-height:1.1;position:relative}
+.tile .foot{display:flex;justify-content:space-between;align-items:center;font-size:13px;opacity:.9}
+.tile .deco{position:absolute;right:-14px;bottom:28px;font-family:var(--serif);font-weight:700;font-size:120px;line-height:1;opacity:.12;pointer-events:none}
+.t1{background:linear-gradient(150deg,#24573F,#173F2E)}
+.t2{background:linear-gradient(150deg,#E8743B,#B44816)}
+.t3{background:linear-gradient(150deg,#3E7A5C,#24573F)}
+.t4{background:linear-gradient(150deg,#173F2E,#0E2A1E)}
+.t5{background:linear-gradient(150deg,#C4561F,#8E3A12)}
+.t6{background:var(--card);color:var(--ink);border:2px dashed var(--line)}
+.t6 .kind{background:var(--card-2)}
+.t6::before{display:none}
+
+footer{margin-top:72px;background:var(--green);color:rgba(255,255,255,.8);padding:36px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff;font-family:var(--serif);font-size:18px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(10,20,15,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
+.lb.open{display:flex}
+.lb img{max-height:100%;border-radius:8px}
+
+@media (max-width:860px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3,.flow{grid-template-columns:1fr 1fr}
+  .grades{grid-template-columns:repeat(3,1fr)}
+  .ig{grid-template-columns:repeat(2,1fr)}
+  .nav{display:none}
+}
+@media (max-width:560px){
+  .links,.g2,.g3,.flow{grid-template-columns:1fr}
+  .leagues{height:auto;grid-template-columns:1fr;align-items:stretch}
+  .lg{min-height:0 !important;height:auto !important;flex-direction:row;align-items:center;gap:12px}
+  .lg .em{flex:1}
+  .grades{grid-template-columns:repeat(2,1fr)}
+  .navbtn{width:36px;height:36px}
+  .tile{padding:14px}
+  .tile .deco{font-size:80px}
+  .cap{flex-direction:column;gap:8px}
+  section{padding-top:48px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-dot"></span>astana hub</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#basics" data-i="nav_basics"></a>
+      <a href="#earn" data-i="nav_earn"></a>
+      <a href="#year" data-i="nav_year"></a>
+      <a href="#employee" data-i="nav_emp"></a>
+      <a href="#event" data-i="nav_event"></a>
+      <a href="#contacts" data-i="nav_links"></a>
+      <a href="#instagram">Instagram</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="ru">RU</button><button data-lang="kz">KZ</button><button data-lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow" data-i="hero_eyebrow"></span>
+    <h1>Social Impact</h1>
+    <p class="lead" data-i="hero_lead"></p>
+
+    <div class="links">
+      <a class="lk primary" href="https://official-nanakai.github.io/index.html/" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+        <span><b data-i="l_packs"></b><span class="sub" data-i="l_packs_s"></span></span><span class="arr">↗</span>
+      </a>
+      <a class="lk" href="https://drive.google.com/drive/folders/1ZWlwbmsqz2iwVemJdtZpC-Zf5qrvRo-w" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span><b data-i="l_web"></b><span class="sub" data-i="l_web_s"></span></span><span class="arr">↗</span>
+      </a>
+      <a class="lk" href="#employee">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M19 8v6M16 11h6"/></svg></span>
+        <span><b data-i="l_emp"></b><span class="sub" data-i="l_emp_s"></span></span><span class="arr">↓</span>
+      </a>
+      <a class="lk" href="#event">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg></span>
+        <span><b data-i="l_event"></b><span class="sub" data-i="l_event_s"></span></span><span class="arr">↓</span>
+      </a>
+      <a class="lk" href="https://t.me/astanahubmembers" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15c.3-1.3-.5-1.9-1.6-1.6zM9.2 14.1l9.1-5.7c.4-.3.8-.1.5.2l-7.5 6.8-.3 3.2-1.8-4.5z"/></svg></span>
+        <span><b data-i="l_tg"></b><span class="sub">@astanahubmembers</span></span><span class="arr">↗</span>
+      </a>
+      <a class="lk" href="https://astanahub.com" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+        <span><b data-i="l_cab"></b><span class="sub">astanahub.com</span></span><span class="arr">↗</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<!-- BASICS -->
+<section id="basics">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="b_eyebrow"></span>
+    <h2 data-i="b_title"></h2>
+    <p data-i="b_lead"></p>
+  </div>
+  <div class="grid g4">
+    <div class="card"><div class="num">01</div><h3>Social Token · ST</h3><p class="muted small" data-i="b_st"></p></div>
+    <div class="card"><div class="num">02</div><h3 data-i="b_plan_t"></h3><p class="muted small" data-i="b_plan"></p></div>
+    <div class="card"><div class="num">03</div><h3 data-i="b_bal_t"></h3><p class="muted small" data-i="b_bal"></p></div>
+    <div class="card"><div class="num">04</div><h3 data-i="b_lg_t"></h3><p class="muted small" data-i="b_lg"></p></div>
+  </div>
+
+  <div class="block">
+    <h3 data-i="flow_t"></h3>
+    <div class="flow">
+      <div class="card"><h3 data-i="f1"></h3><p class="muted small" data-i="f1d"></p></div>
+      <div class="card"><h3 data-i="f2"></h3><p class="muted small" data-i="f2d"></p></div>
+      <div class="card"><h3 data-i="f3"></h3><p class="muted small" data-i="f3d"></p></div>
+      <div class="card"><h3 data-i="f4"></h3><p class="muted small" data-i="f4d"></p></div>
+      <div class="card"><h3 data-i="f5"></h3><p class="muted small" data-i="f5d"></p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3 data-i="lg_t"></h3>
+    <div class="leagues">
+      <div class="lg" style="height:30%;background:#D7E4F5"><span class="nm">XS</span><span class="em" data-i="lg_xs"></span><span class="pl">80 <small>ST</small></span></div>
+      <div class="lg" style="height:45%;background:#DCE6FA"><span class="nm">S</span><span class="em" data-i="lg_s"></span><span class="pl">244 <small>ST</small></span></div>
+      <div class="lg" style="height:62%;background:#DDEBD6"><span class="nm">M</span><span class="em" data-i="lg_m"></span><span class="pl">604 <small>ST</small></span></div>
+      <div class="lg" style="height:80%;background:#FCE6CF"><span class="nm">L</span><span class="em" data-i="lg_l"></span><span class="pl">1 004 <small>ST</small></span></div>
+      <div class="lg" style="height:100%;background:#F2C3BA"><span class="nm">XL</span><span class="em" data-i="lg_xl"></span><span class="pl">1 204 <small>ST</small></span></div>
+    </div>
+    <p class="note" data-i="lg_note"></p>
+  </div>
+
+  <div class="block grid g2">
+    <div class="card soft">
+      <span class="eyebrow" data-i="gl_e1"></span>
+      <h3 style="margin:6px 0" data-i="gl_l"></h3>
+      <p class="muted small" data-i="gl_ld"></p>
+    </div>
+    <div class="card dark">
+      <span class="eyebrow" style="color:var(--orange-2)" data-i="gl_e2"></span>
+      <h3 style="margin:6px 0" data-i="gl_g"></h3>
+      <p class="muted small" data-i="gl_gd"></p>
+    </div>
+  </div>
+  <div class="grades" style="margin-top:10px">
+    <div class="gr" style="background:#D7E4F5"><b>A</b><span data-i="gr_a"></span><div class="ix">×1,5</div></div>
+    <div class="gr" style="background:#DCE6FA"><b>B</b><span data-i="gr_b"></span><div class="ix">×2</div></div>
+    <div class="gr" style="background:#DDEBD6"><b>C</b><span data-i="gr_c"></span><div class="ix">×4</div></div>
+    <div class="gr" style="background:#FCE6CF"><b>D</b><span data-i="gr_d"></span><div class="ix">×6</div></div>
+    <div class="gr" style="background:#F7D0C4"><b>E</b><span data-i="gr_e"></span><div class="ix">×8</div></div>
+    <div class="gr" style="background:#F0B3A6"><b>F</b><span data-i="gr_f"></span><div class="ix">×10</div></div>
+  </div>
+  <p class="note" data-i="gr_note"></p>
+
+  <div class="block grid g2">
+    <div class="card">
+      <h3 data-i="bal_t"></h3>
+      <p style="font-family:var(--serif);font-size:44px;font-weight:700;color:var(--orange);margin:8px 0">50 <span style="color:var(--ink-3)">/ 80</span></p>
+      <p class="muted small" data-i="bal_d"></p>
+    </div>
+    <div class="card">
+      <h3 data-i="ind_t"></h3>
+      <div class="meter"></div>
+      <div class="lvl"><span><i class="dot" style="background:var(--ok)"></i><span data-i="ind_h"></span></span><b>75–100%</b></div>
+      <div class="lvl"><span><i class="dot" style="background:var(--yellow)"></i><span data-i="ind_m"></span></span><b>25–74%</b></div>
+      <div class="lvl"><span><i class="dot" style="background:var(--red)"></i><span data-i="ind_l"></span></span><b>0–24%</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- EARN -->
+<section id="earn">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="e_eyebrow"></span>
+    <h2 data-i="e_title"></h2>
+    <p data-i="e_lead"></p>
+  </div>
+  <div class="grid g4">
+    <div class="card"><div class="num">01</div><h3 data-i="a1"></h3><p class="muted small" data-i="a1d"></p><div class="st">3–7<small>ST</small></div></div>
+    <div class="card"><div class="num">02</div><h3 data-i="a2"></h3><p class="muted small" data-i="a2d"></p><div class="st">30–120<small>ST</small></div></div>
+    <div class="card"><div class="num">03</div><h3 data-i="a3"></h3><p class="muted small" data-i="a3d"></p><div class="st">20–60<small>ST</small></div></div>
+    <div class="card"><div class="num">04</div><h3 data-i="a4"></h3><p class="muted small" data-i="a4d"></p><div class="st">30<small>ST</small></div></div>
+    <div class="card"><div class="num">05</div><h3 data-i="a5"></h3><p class="muted small" data-i="a5d"></p><div class="st"><span data-i="from"></span> 28<small>ST</small></div></div>
+    <div class="card"><div class="num">06</div><h3 data-i="a6"></h3><p class="muted small" data-i="a6d"></p><div class="st"><span data-i="from"></span> 15<small>ST</small></div></div>
+    <div class="card"><div class="num">07</div><h3>Hub Market</h3><p class="muted small" data-i="a7d"></p><div class="st">10 / 25<small>ST</small></div></div>
+    <div class="card"><div class="num">08</div><h3 data-i="a8"></h3><p class="muted small" data-i="a8d"></p><div class="st">80–160<small>ST</small></div></div>
+  </div>
+  <div class="card soft" style="margin-top:12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+    <b data-i="mand"></b><span class="muted" data-i="mand_d"></span><span class="st" style="margin:0 0 0 auto">4 / 6<small>ST</small></span>
+  </div>
+  <p class="note" data-i="e_note"></p>
+
+  <div class="block">
+    <h3><span data-i="new_t"></span> <span class="tag" data-i="new_tag"></span></h3>
+    <div class="grid g4">
+      <div class="card soft"><h3 data-i="n1"></h3><p class="muted small" data-i="n1d"></p></div>
+      <div class="card soft"><h3 data-i="n2"></h3><p class="muted small" data-i="n2d"></p></div>
+      <div class="card soft"><h3>RISE Research</h3><p class="muted small" data-i="n3d"></p></div>
+      <div class="card soft"><h3 data-i="n4"></h3><p class="muted small" data-i="n4d"></p></div>
+    </div>
+    <p class="note" data-i="new_note"></p>
+  </div>
+
+  <div class="block grid g2">
+    <div class="card">
+      <h3 data-i="sp_t"></h3>
+      <p class="muted small" style="margin:6px 0 10px" data-i="sp_d"></p>
+      <table class="tbl">
+        <tr><td>Digital Bridge / Digital Kazakhstan</td><td><b>160 ST</b></td><td class="muted small" data-i="sp1"></td></tr>
+        <tr><td data-i="sp_reg"></td><td><b>90 ST</b></td><td class="muted small" data-i="sp2"></td></tr>
+        <tr><td data-i="sp_ah"></td><td><b>80 ST</b></td><td class="muted small" data-i="sp2"></td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3 data-i="lim_t"></h3>
+      <p class="muted small" style="margin:6px 0 10px" data-i="lim_d"></p>
+      <div class="scroll-x"><table class="tbl">
+        <thead><tr><th></th><th>XS</th><th>S</th><th>M</th><th>L</th><th>XL</th></tr></thead>
+        <tr><td data-i="lim_ev"></td><td>3</td><td>10</td><td>20</td><td>30</td><td>40</td></tr>
+        <tr><td data-i="lim_in"></td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td></tr>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+<!-- YEAR -->
+<section id="year">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="y_eyebrow"></span>
+    <h2 data-i="y_title"></h2>
+    <p data-i="y_lead"></p>
+  </div>
+  <div class="grid g2">
+    <div class="card split"><h3 data-i="y_ok"></h3><p class="muted small" style="margin-top:6px" data-i="y_okd"></p></div>
+    <div class="card split bad"><h3 data-i="y_bad"></h3><p class="muted small" style="margin-top:6px" data-i="y_badd"></p></div>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card dark">
+      <h3 data-i="y_lim"></h3>
+      <ul class="muted small" style="padding-left:18px;margin:10px 0 0;display:grid;gap:6px">
+        <li data-i="y_l1"></li><li data-i="y_l2"></li><li data-i="y_l3"></li>
+      </ul>
+    </div>
+    <div class="card dark">
+      <h3 data-i="y_buy"></h3>
+      <p class="muted small" style="margin:4px 0 8px" data-i="y_buyd"></p>
+      <div class="yr-row"><span data-i="y_b1"></span><b>× 1,5</b></div>
+      <div class="yr-row"><span data-i="y_b2"></span><b>× 2,0</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPLOYEE -->
+<section id="employee">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="m_eyebrow"></span>
+    <h2 data-i="m_title"></h2>
+    <p data-i="m_lead"></p>
+  </div>
+  <div class="warn">⚠️ <span data-i="m_warn"></span></div>
+  <div class="phases" role="tablist">
+    <button class="phase" role="tab" data-phase="0"><span class="pn">1</span><span data-i="ph1"></span></button>
+    <button class="phase" role="tab" data-phase="1"><span class="pn">2</span><span data-i="ph2"></span></button>
+    <button class="phase" role="tab" data-phase="2"><span class="pn">3</span><span data-i="ph3"></span></button>
+  </div>
+  <div class="carousel">
+    <div class="stage" id="stage">
+      <img id="slide" alt="" src="img/step-02.jpg">
+      <button class="navbtn prev" id="prev" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <button class="navbtn next" id="next" aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="cap"><span class="count" id="count"></span><p id="caption"></p></div>
+    <div class="dots" id="dots"></div>
+  </div>
+  <p class="note" data-i="m_zoom"></p>
+
+  <div class="block">
+    <h3 data-i="roles_t"></h3>
+    <div class="grid g3">
+      <div class="card soft"><span class="eyebrow" data-i="role"></span><h3 data-i="r1"></h3><p class="muted small" data-i="r1d"></p></div>
+      <div class="card soft"><span class="eyebrow" data-i="role"></span><h3 data-i="r2"></h3><p class="muted small" data-i="r2d"></p></div>
+      <div class="card soft"><span class="eyebrow" data-i="role"></span><h3 data-i="r3"></h3><p class="muted small" data-i="r3d"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section id="event">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="v_eyebrow"></span>
+    <h2 data-i="v_title"></h2>
+    <p data-i="v_lead"></p>
+  </div>
+  <div class="grid g2" style="align-items:start">
+    <div class="grid">
+      <div class="card err"><span class="x">1</span><div><h3 data-i="er1"></h3><p data-i="er1d"></p></div></div>
+      <div class="card err"><span class="x">2</span><div><h3 data-i="er2"></h3><p data-i="er2d"></p></div></div>
+      <div class="card err"><span class="x">3</span><div><h3 data-i="er3"></h3><p data-i="er3d"></p></div></div>
+      <div class="card err"><span class="x">4</span><div><h3 data-i="er4"></h3><p data-i="er4d"></p></div></div>
+    </div>
+    <div class="check" id="check">
+      <h3 data-i="ch_t"></h3>
+      <p style="color:rgba(255,255,255,.75);font-size:14px;margin-top:6px" data-i="ch_d"></p>
+      <div class="bar"><i id="barfill"></i></div>
+      <p style="font-size:12px;color:rgba(255,255,255,.65)" id="chcount"></p>
+      <label class="ci"><input type="checkbox"><span><span data-i="c1"></span><small data-i="c1s"></small></span></label>
+      <label class="ci"><input type="checkbox"><span><span data-i="c2"></span><small data-i="c2s"></small></span></label>
+      <label class="ci"><input type="checkbox"><span><span data-i="c3"></span><small data-i="c3s"></small></span></label>
+      <label class="ci"><input type="checkbox"><span><span data-i="c4"></span><small data-i="c4s"></small></span></label>
+      <div class="done" data-i="ch_done"></div>
+    </div>
+  </div>
+
+  <div class="block card">
+    <h3 style="margin-bottom:14px" data-i="first_t"></h3>
+    <ol class="steps-ol">
+      <li><span class="n">1</span><div><b data-i="fs1"></b><p data-i="fs1d"></p></div></li>
+      <li><span class="n">2</span><div><b data-i="fs2"></b><p data-i="fs2d"></p></div></li>
+      <li><span class="n">3</span><div><b data-i="fs3"></b><p data-i="fs3d"></p></div></li>
+      <li><span class="n">4</span><div><b data-i="fs4"></b><p data-i="fs4d"></p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+  <div class="sec-head">
+    <span class="eyebrow" data-i="k_eyebrow"></span>
+    <h2 data-i="k_title"></h2>
+  </div>
+  <div class="grid g2">
+    <a class="card contact" href="https://official-nanakai.github.io/index.html/" target="_blank" rel="noopener">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+      <span><b><span data-i="l_packs"></span><span class="tag" data-i="k_rec"></span></b><span class="muted small" data-i="k_packs"></span></span>
+    </a>
+    <a class="card contact" href="https://drive.google.com/drive/folders/1ZWlwbmsqz2iwVemJdtZpC-Zf5qrvRo-w" target="_blank" rel="noopener">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+      <span><b data-i="l_web"></b><span class="muted small" data-i="k_web"></span></span>
+    </a>
+    <a class="card contact" href="https://t.me/astanahubmembers" target="_blank" rel="noopener">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.2 2.9 11.4c-1.3.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.8.8s.6-.2.9-.5l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.8-.8l3.2-15c.3-1.3-.5-1.9-1.6-1.6z"/></svg></span>
+      <span><b>t.me/astanahubmembers</b><span class="muted small" data-i="k_tg"></span></span>
+    </a>
+    <a class="card contact" href="mailto:monitoring@astanahub.com">
+      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+      <span><b>monitoring@astanahub.com</b><span class="muted small" data-i="k_mail"></span></span>
+    </a>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <b data-i="k_phone"></b>
+    <div class="phones">
+      <a href="tel:1818">1818</a>
+      <a href="tel:+77172735089">+7 7172 73 50 89</a>
+      <a href="tel:+77719499078">+7 771 949 90 78</a>
+      <a href="tel:+77470940237">+7 747 094 02 37</a>
+      <a href="https://t.me/astana_it_hub" target="_blank" rel="noopener">Telegram @astana_it_hub</a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <div class="sec-head">
+    <span class="eyebrow">Instagram</span>
+    <h2 data-i="ig_title"></h2>
+    <p data-i="ig_lead"></p>
+  </div>
+  <div class="ig">
+    <a class="tile t1" href="https://www.instagram.com/p/Dd1BK4FiI4X/" target="_blank" rel="noopener">
+      <span class="kind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="13" height="15" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v11"/></svg><span data-i="k_car"></span></span>
+      <span class="deco">🏆</span>
+      <span class="big" data-i="ig1"></span>
+      <span class="foot"><span data-i="ig1s"></span><span>↗</span></span>
+    </a>
+    <a class="tile t2" href="https://www.instagram.com/p/DdYBiZVoLRW/" target="_blank" rel="noopener">
+      <span class="kind"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span data-i="k_vid"></span></span>
+      <span class="deco">DB</span>
+      <span class="big" data-i="ig2"></span>
+      <span class="foot"><span data-i="ig2s"></span><span>↗</span></span>
+    </a>
+    <a class="tile t3" href="https://www.instagram.com/p/Dc_AAzbIemy/" target="_blank" rel="noopener">
+      <span class="kind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-11 11"/></svg><span data-i="k_post"></span></span>
+      <span class="deco">☕</span>
+      <span class="big">Social Impact Brunch</span>
+      <span class="foot"><span data-i="ig3s"></span><span>↗</span></span>
+    </a>
+    <a class="tile t4" href="https://www.instagram.com/p/DcfqSvHiG16/" target="_blank" rel="noopener">
+      <span class="kind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="13" height="15" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v11"/></svg><span data-i="k_car"></span></span>
+      <span class="deco">10</span>
+      <span class="big" data-i="ig4"></span>
+      <span class="foot"><span data-i="ig4s"></span><span>↗</span></span>
+    </a>
+    <a class="tile t5" href="https://www.instagram.com/p/Db7V0CLI-Oz/" target="_blank" rel="noopener">
+      <span class="kind"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>Reels</span>
+      <span class="deco">ST</span>
+      <span class="big" data-i="ig5"></span>
+      <span class="foot"><span data-i="ig5s"></span><span>↗</span></span>
+    </a>
+    <a class="tile t6" href="https://t.me/astanahubmembers" target="_blank" rel="noopener">
+      <span class="kind">Telegram</span>
+      <span class="big" data-i="ig6"></span>
+      <span class="foot"><span>@astanahubmembers</span><span>↗</span></span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Social Impact · Astana Hub</b><p style="margin-top:6px" data-i="ft"></p></div>
+    <div><a href="mailto:monitoring@astanahub.com">monitoring@astanahub.com</a><br><a href="https://t.me/astanahubmembers" target="_blank" rel="noopener">t.me/astanahubmembers</a></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true"><img id="lbimg" alt=""></div>
+
+<script>
+const T = {
+nav_basics:["Основы","Негіздер","Basics"],
+nav_earn:["Как набрать ST","ST жинау","Earning ST"],
+nav_year:["Итоги года","Жыл қорытындысы","Year-end"],
+nav_emp:["Сотрудники","Қызметкерлер","Employees"],
+nav_event:["Заявки","Өтінімдер","Applications"],
+nav_links:["Контакты","Байланыс","Contacts"],
+hero_eyebrow:["Гайд для резидентов Astana Hub","Astana Hub резиденттеріне арналған нұсқаулық","A guide for Astana Hub residents"],
+hero_lead:["Программа встречных обязательств: как набирать Social Tokens, выполнять годовой План и не терять баллы из-за мелких ошибок.","Қарсы міндеттемелер бағдарламасы: Social Tokens қалай жинау, жылдық Жоспарды орындау және ұсақ қателер салдарынан ұпай жоғалтпау.","The counter-obligations programme: how to earn Social Tokens, meet your annual Plan and avoid losing points to small mistakes."],
+l_packs:["Пакеты активностей","Белсенділік пакеттері","Activity packages"],
+l_packs_s:["Готовые идеи, как закрыть План","Жоспарды жабуға арналған дайын идеялар","Ready-made ideas to hit your Plan"],
+l_web:["Запись вебинара","Вебинар жазбасы","Webinar recording"],
+l_web_s:["Подробный разбор и частые вопросы","Толық талдау және жиі қойылатын сұрақтар","Full walkthrough and FAQ"],
+l_emp:["Как добавить сотрудника","Қызметкерді қалай қосу керек","How to add an employee"],
+l_emp_s:["Пошагово, со скриншотами","Скриншоттармен, қадамдап","Step by step, with screenshots"],
+l_event:["Заявка на мероприятие","Іс-шараға өтінім","Event application"],
+l_event_s:["Частые ошибки и чек-лист","Жиі қателер және чек-парақ","Common mistakes and checklist"],
+l_tg:["Telegram-канал участников","Қатысушылардың Telegram-арнасы","Members' Telegram channel"],
+l_cab:["Личный кабинет","Жеке кабинет","Your dashboard"],
+
+b_eyebrow:["Что это такое","Бұл не","What it is"],
+b_title:["Social Impact — вклад участников в развитие IT-экосистемы","Social Impact — қатысушылардың IT-экожүйені дамытуға қосқан үлесі","Social Impact: members' contribution to the IT ecosystem"],
+b_lead:["Раздел в личном кабинете на astanahub.com. За реальные действия — отчётность, мероприятия, PR, найм, спонсорство — начисляются Social Tokens (ST), которые засчитываются в годовой План компании.","astanahub.com жеке кабинетіндегі бөлім. Нақты әрекеттер үшін — есептілік, іс-шаралар, PR, жұмысқа алу, демеушілік — Social Tokens (ST) беріледі, олар компанияның жылдық Жоспарына есептеледі.","A section of your astanahub.com dashboard. Real actions (reporting, events, PR, hiring, sponsorship) earn Social Tokens (ST), which count towards your company's annual Plan."],
+b_st:["Валюта встречных обязательств компании перед Фондом.","Компанияның Қор алдындағы қарсы міндеттемелерінің валютасы.","The currency of your company's obligations to the Fund."],
+b_plan_t:["План","Жоспар","Plan"],
+b_plan:["Целевой объём ST на календарный год.","Күнтізбелік жылға арналған ST мақсатты көлемі.","Your target amount of ST for the calendar year."],
+b_bal_t:["Баланс","Баланс","Balance"],
+b_bal:["Накопленные ST за текущий год.","Ағымдағы жылы жиналған ST.","ST accumulated in the current year."],
+b_lg_t:["Лига","Лига","League"],
+b_lg:["Категория компании по числу сотрудников.","Қызметкерлер саны бойынша компания санаты.","Your company's category by headcount."],
+flow_t:["Как работает модуль","Модуль қалай жұмыс істейді","How the module works"],
+f1:["Выбор","Таңдау","Choose"], f1d:["Находите на «фуршетном столе» активности, подходящие компании.","«Фуршеттік үстелден» компанияға сай белсенділіктерді табыңыз.","Pick activities from the “buffet table” that fit your company."],
+f2:["Активность","Белсенділік","Act"], f2d:["Выполняете задачи: PR, мероприятия, найм, спонсорство.","Тапсырмаларды орындайсыз: PR, іс-шаралар, жұмысқа алу, демеушілік.","Do the work: PR, events, hiring, sponsorship."],
+f3:["Модерация","Модерация","Review"], f3d:["Модератор проверяет факт выполнения и материалы.","Модератор орындалу фактісі мен материалдарды тексереді.","A moderator checks completion and materials."],
+f4:["Начисление","Есептеу","Credit"], f4d:["ST падают на Баланс после успешной модерации.","Сәтті модерациядан кейін ST Балансқа түседі.","ST land on your Balance after approval."],
+f5:["План","Жоспар","Plan"], f5d:["ST засчитываются в годовой План компании.","ST компанияның жылдық Жоспарына есептеледі.","ST count towards your annual Plan."],
+lg_t:["План зависит от размера компании (Лига)","Жоспар компания көлеміне байланысты (Лига)","Your Plan depends on company size (League)"],
+lg_xs:["0–10 сотрудников","0–10 қызметкер","0–10 employees"],
+lg_s:["11–50 сотрудников","11–50 қызметкер","11–50 employees"],
+lg_m:["51–100 сотрудников","51–100 қызметкер","51–100 employees"],
+lg_l:["101–150 сотрудников","101–150 қызметкер","101–150 employees"],
+lg_xl:["от 151 сотрудника","151 қызметкерден бастап","151+ employees"],
+lg_note:["Новым участникам при вступлении присваивается Лига XS; итоговая Лига определяется по отчёту за квартал, в котором они вступили.","Жаңа қатысушыларға кіру кезінде XS Лигасы беріледі; түпкілікті Лига олар кірген тоқсан бойынша есеппен анықталады.","New members start in League XS; the final League is set by the report for the quarter in which they joined."],
+gl_e1:["Лига — по штату","Лига — штат бойынша","League: by headcount"],
+gl_l:["Сколько активностей компания физически может провести","Компания физикалық тұрғыда қанша белсенділік өткізе алады","How many activities you can physically run"],
+gl_ld:["3 человека не проведут 20 митапов — поэтому План зависит от числа сотрудников.","3 адам 20 митап өткізе алмайды — сондықтан Жоспар қызметкерлер санына байланысты.","Three people can't run 20 meetups, so the Plan scales with headcount."],
+gl_e2:["Грейд — по выручке","Грейд — түсім бойынша","Grade: by revenue"],
+gl_g:["Реальный финансовый масштаб компании","Компанияның нақты қаржылық ауқымы","Your company's real financial scale"],
+gl_gd:["Платформа считает Грейд автоматически по годовой выручке. Вводить его вручную не нужно.","Платформа Грейдті жылдық түсім бойынша автоматты түрде есептейді. Оны қолмен енгізудің қажеті жоқ.","The platform calculates your Grade automatically from annual revenue. No manual input needed."],
+gr_a:["до 50 млн ₸/год","50 млн ₸/жыл дейін","up to ₸50M/yr"],
+gr_b:["50–200 млн ₸/год","50–200 млн ₸/жыл","₸50–200M/yr"],
+gr_c:["200–500 млн ₸/год","200–500 млн ₸/жыл","₸200–500M/yr"],
+gr_d:["500 млн – 1 млрд ₸/год","500 млн – 1 млрд ₸/жыл","₸500M–1B/yr"],
+gr_e:["1–3 млрд ₸/год","1–3 млрд ₸/жыл","₸1–3B/yr"],
+gr_f:["свыше 3 млрд ₸/год","3 млрд ₸/жыл астам","over ₸3B/yr"],
+gr_note:["Индекс Грейда вместе с Лигой определяет стоимость 1 ST и спонсорского пакета.","Грейд индексі Лигамен бірге 1 ST және демеушілік пакеттің құнын анықтайды.","Together with the League, the Grade index sets the price of 1 ST and of a sponsorship package."],
+bal_t:["Баланс ST / План ST","ST Балансы / ST Жоспары","ST Balance / ST Plan"],
+bal_d:["Обновляется в реальном времени в разделе «Мой Баланс». ST могут быть аннулированы в течение 30 дней при нарушениях.","«Менің Балансым» бөлімінде нақты уақытта жаңарады. Бұзушылық болса, ST 30 күн ішінде жойылуы мүмкін.","Updates in real time under “My Balance”. ST can be revoked within 30 days if rules are broken."],
+ind_t:["Индикатор успеваемости","Үлгерім индикаторы","Progress indicator"],
+ind_h:["Высокая","Жоғары","High"], ind_m:["Средняя","Орташа","Medium"], ind_l:["Низкая","Төмен","Low"],
+
+e_eyebrow:["Фуршетный стол","Фуршеттік үстел","The buffet table"],
+e_title:["За что начисляются ST","ST не үшін беріледі","What earns ST"],
+e_lead:["Не нужно участвовать во всём — выбирайте направления, которые подходят деятельности вашей компании.","Барлығына қатысу міндетті емес — компанияңыздың қызметіне сай бағыттарды таңдаңыз.","You don't need to do everything. Pick the directions that fit your company."],
+from:["от","бастап","from"],
+a1:["PR и продвижение","PR және ілгерілету","PR & promotion"], a1d:["Посты о достижениях на astanahub.com и в СМИ.","astanahub.com-да және БАҚ-та жетістіктер туралы жазбалар.","Posts about achievements on astanahub.com and in the media."],
+a2:["Мероприятия","Іс-шаралар","Events"], a2d:["Анонсы, участие, спикерство; проведение своего IT-события.","Анонстар, қатысу, спикер болу; өз IT-іс-шараңызды өткізу.","Announcements, attendance, speaking; hosting your own IT event."],
+a3:["Коллаборации","Ынтымақтастық","Collaborations"], a3d:["Стажёры из партнёрских вузов, Tomorrow School, лекции, менторство.","Серіктес ЖОО тағылымдамашылары, Tomorrow School, дәрістер, менторлық.","Interns from partner universities, Tomorrow School, lectures, mentoring."],
+a4:["Социальный вклад","Әлеуметтік үлес","Social contribution"], a4d:["Участие в соцпроектах на безвозмездной основе.","Әлеуметтік жобаларға тегін негізде қатысу.","Pro bono participation in social projects."],
+a5:["Тех. задачи","Тех. тапсырмалар","Tech challenges"], a5d:["Публикация и решение технологических задач.","Технологиялық тапсырмаларды жариялау және шешу.","Publishing and solving technology challenges."],
+a6:["Поиск талантов","Таланттарды іздеу","Talent search"], a6d:["Вакансии и найм сотрудников через портал.","Портал арқылы бос орындар және қызметкерлерді жалдау.","Vacancies and hiring through the portal."],
+a7d:["Экспертные карточки, услуги, консультации.","Сараптамалық карточкалар, қызметтер, кеңестер.","Expert cards, services, consultations."],
+a8:["Спонсорство","Демеушілік","Sponsorship"], a8d:["Digital Bridge, Digital Kazakhstan, региональные хабы, события Astana Hub.","Digital Bridge, Digital Kazakhstan, өңірлік хабтар, Astana Hub іс-шаралары.","Digital Bridge, Digital Kazakhstan, regional hubs, Astana Hub events."],
+mand:["Обязательное:","Міндетті:","Mandatory:"],
+mand_d:["сдача квартальной отчётности вовремя","тоқсандық есептілікті уақытында тапсыру","submitting quarterly reports on time"],
+e_note:["Это лишь часть активностей. Полный перечень и точные ставки — в Регламенте (раздел «О модуле» в кабинете). По каждой активности действует общий лимит на компанию — сверх лимита ST не начисляются.","Бұл белсенділіктердің бір бөлігі ғана. Толық тізім мен нақты мөлшерлемелер — Регламентте (кабинеттегі «Модуль туралы» бөлімі). Әр белсенділік бойынша компанияға ортақ лимит бар — лимиттен тыс ST берілмейді.","This is only part of the list. The full list and exact rates are in the Regulations (“About the module” in your dashboard). Each activity has a company-wide cap; ST above it are not credited."],
+new_t:["Новые направления","Жаңа бағыттар","New directions"],
+new_tag:["Новое","Жаңа","New"],
+n1:["Трудоустройство","Жұмысқа орналастыру","Employment"], n1d:["Трудоустройство выпускников Tomorrow School / Tech Orda.","Tomorrow School / Tech Orda түлектерін жұмысқа орналастыру.","Hiring Tomorrow School / Tech Orda graduates."],
+n2:["Болашак","Болашақ","Bolashak"], n2d:["Взаимодействие со стипендиатами и выпускниками программы «Болашак».","«Болашақ» бағдарламасының стипендиаттарымен және түлектерімен өзара іс-қимыл.","Working with Bolashak scholars and alumni."],
+n3d:["Участие в исследовательских инициативах RISE Research.","RISE Research зерттеу бастамаларына қатысу.","Taking part in RISE Research initiatives."],
+n4:["Свой IT-продукт","Өз IT-өнімі","Your IT product"], n4d:["Безвозмездное предоставление своего IT-продукта для процессов Astana Hub.","Astana Hub процестері үшін өз IT-өнімін тегін ұсыну.","Providing your IT product pro bono to automate Astana Hub processes."],
+new_note:["Ставки ST по новым направлениям уточняются — следите за обновлениями Регламента.","Жаңа бағыттар бойынша ST мөлшерлемелері нақтылануда — Регламент жаңартуларын қадағалаңыз.","ST rates for new directions are being finalised; watch for Regulation updates."],
+sp_t:["Спонсорские пакеты","Демеушілік пакеттер","Sponsorship packages"],
+sp_d:["Один из самых весомых способов набрать ST и заявить о бренде.","ST жинаудың және брендті танытудың ең салмақты тәсілдерінің бірі.","One of the biggest ways to earn ST and raise your brand's profile."],
+sp1:["до 100% Плана","Жоспардың 100%-на дейін","up to 100% of Plan"],
+sp2:["до 80% Плана","Жоспардың 80%-на дейін","up to 80% of Plan"],
+sp_reg:["Региональные хабы","Өңірлік хабтар","Regional hubs"],
+sp_ah:["Мероприятия Astana Hub","Astana Hub іс-шаралары","Astana Hub events"],
+lim_t:["Лимиты участников по Лигам","Лигалар бойынша қатысушылар лимиті","Participant caps by League"],
+lim_d:["Лимит общий на компанию. Участвовать сверх лимита можно, но ST не начисляются.","Лимит компанияға ортақ. Лимиттен тыс қатысуға болады, бірақ ST берілмейді.","Caps are company-wide. You can go beyond them, but no ST are credited."],
+lim_ev:["Сотрудников на 1 мероприятие","1 іс-шараға қызметкерлер","Employees per event"],
+lim_in:["Стажёров за год","Жылына тағылымдамашылар","Interns per year"],
+
+y_eyebrow:["Годовой цикл","Жылдық цикл","Annual cycle"],
+y_title:["Закрытие годового Плана","Жылдық Жоспарды жабу","Closing the annual Plan"],
+y_lead:["31 декабря — проверка выполнения · 1 февраля — списание Баланса","31 желтоқсан — орындалуын тексеру · 1 ақпан — Балансты есептен шығару","31 December: completion check · 1 February: Balance is written off"],
+y_ok:["Если ST ≥ План","Егер ST ≥ Жоспар","If ST ≥ Plan"],
+y_okd:["Обязательства выполнены. Остаток ST сверх Плана сохраняется и переходит на следующий год.","Міндеттемелер орындалды. Жоспардан артық ST сақталып, келесі жылға ауысады.","Obligations met. ST above the Plan carry over to next year."],
+y_bad:["Если ST < План","Егер ST < Жоспар","If ST < Plan"],
+y_badd:["Баланс обнуляется, а недостача переходит на следующий год как отрицательный Баланс — его нужно покрыть.","Баланс нөлденеді, ал жетіспеушілік келесі жылға теріс Баланс ретінде ауысады — оны жабу қажет.","The Balance resets and the shortfall carries over as a negative Balance that must be covered."],
+y_lim:["Важные ограничения","Маңызды шектеулер","Important limits"],
+y_l1:["Минусовый Баланс переносится не более одного раза подряд.","Теріс Баланс қатарынан бір реттен артық ауыспайды.","A negative Balance can carry over only once in a row."],
+y_l2:["Минус второй год подряд — меры вплоть до исключения из участников.","Қатарынан екінші жыл минус — қатысушылардан шығаруға дейінгі шаралар.","A deficit two years running can lead to measures up to exclusion."],
+y_l3:["Отрицательный Баланс можно закрыть деньгами — выкупив недостающие ST.","Теріс Балансты ақшамен жабуға болады — жетіспейтін ST сатып алу арқылы.","A negative Balance can be closed by buying the missing ST."],
+y_buy:["Денежный выкуп ST","ST ақшалай сатып алу","Buying out ST"],
+y_buyd:["Чем раньше закрываете — тем дешевле. Формула — в Приложении №2 Регламента.","Неғұрлым ерте жапсаңыз, соғұрлым арзан. Формула — Регламенттің №2 Қосымшасында.","The earlier you close, the cheaper it is. Formula in Annex 2 of the Regulations."],
+y_b1:["до 31 марта","31 наурызға дейін","by 31 March"],
+y_b2:["до 30 июня","30 маусымға дейін","by 30 June"],
+
+m_eyebrow:["Инструкция astanahub.com","astanahub.com нұсқаулығы","astanahub.com how-to"],
+m_title:["Как добавить сотрудника","Қызметкерді қалай қосу керек","How to add an employee"],
+m_lead:["Чтобы каждый сотрудник помогал набирать ST в общий Баланс компании, его нужно привязать к компании на портале.","Әр қызметкер компанияның ортақ Балансына ST жинауға көмектесуі үшін оны порталда компанияға тіркеу қажет.","For every employee's ST to count towards your company Balance, they must be linked to the company on the portal."],
+m_warn:["Добавлять сотрудников может только директор компании.","Қызметкерлерді тек компания директоры қоса алады.","Only the company director can add employees."],
+ph1:["Директор приглашает","Директор шақырады","Director invites"],
+ph2:["Сотрудник присоединяется","Қызметкер қосылады","Employee joins"],
+ph3:["Директор принимает","Директор қабылдайды","Director approves"],
+m_zoom:["Нажмите на скриншот, чтобы открыть его крупнее. Листайте стрелками или свайпом.","Үлкейту үшін скриншотты басыңыз. Көрсеткілермен немесе свайппен ауыстырыңыз.","Tap a screenshot to enlarge it. Use the arrows or swipe."],
+of:["из","/","of"],
+roles_t:["Роли сотрудников","Қызметкерлердің рөлдері","Employee roles"],
+role:["Роль","Рөл","Role"],
+r1:["Участник","Қатысушы","Participant"], r1d:["Выполняет отдельные активности и зарабатывает ST в общий Баланс компании.","Жекелеген белсенділіктерді орындап, компанияның ортақ Балансына ST жинайды.","Completes activities and earns ST for the company Balance."],
+r2:["Советник","Кеңесші","Advisor"], r2d:["Помогает вести активности и следить за прогрессом компании в модуле.","Белсенділіктерді жүргізуге және модульдегі компания прогресін қадағалауға көмектеседі.","Helps run activities and track the company's progress in the module."],
+r3:["Финансовый консультант","Қаржы кеңесшісі","Financial consultant"], r3d:["Отвечает за вопросы выкупа ST и финансовое закрытие годового Плана.","ST сатып алу және жылдық Жоспарды қаржылық жабу мәселелеріне жауап береді.","Handles ST buy-outs and the financial close of the annual Plan."],
+
+v_eyebrow:["Частые ошибки","Жиі кездесетін қателер","Common mistakes"],
+v_title:["Как подать заявку на участие в мероприятии","Іс-шараға қатысуға өтінімді қалай беру керек","How to apply for event credit"],
+v_lead:["Самая частая причина отказа: сотрудник был на мероприятии, но не отсканировал QR-код. Без скана модератор не может подтвердить участие.","Бас тартудың ең жиі себебі: қызметкер іс-шарада болды, бірақ QR-кодты сканерлемеді. Сканерсіз модератор қатысуды растай алмайды.","The most common reason for rejection: the employee attended but didn't scan the QR code. Without a scan, the moderator can't confirm attendance."],
+er1:["Не отсканировали QR-код","QR-код сканерленбеді","QR code not scanned"],
+er1d:["QR выдаёт организатор и на онлайн-, и на офлайн-мероприятиях. Сканируйте до подачи заявки — статус должен появиться в базе Astana Hub.","QR-кодты ұйымдастырушы онлайн және офлайн іс-шараларда береді. Өтінім берер алдында сканерлеңіз — мәртебе Astana Hub базасында пайда болуы керек.","The organiser provides the QR at both online and offline events. Scan it before applying; the status must appear in the Astana Hub database."],
+er2:["Сотрудник не привязан к компании","Қызметкер компанияға тіркелмеген","Employee not linked to the company"],
+er2d:["Проверьте, что сотрудник прикреплён к нужной компании на astanahub.com. Если нет — добавьте его по инструкции выше.","Қызметкердің astanahub.com-да тиісті компанияға тіркелгенін тексеріңіз. Болмаса — жоғарыдағы нұсқаулық бойынша қосыңыз.","Check the employee is attached to the right company on astanahub.com. If not, add them using the guide above."],
+er3:["Мероприятие не из списка","Іс-шара тізімнен таңдалмаған","Event not picked from the list"],
+er3d:["Укажите дату — мероприятие появится в каталоге, выберите его. Вебинар? Выберите «Другое» и впишите название вручную.","Күнді көрсетіңіз — іс-шара каталогта пайда болады, оны таңдаңыз. Вебинар ма? «Басқа» тармағын таңдап, атауын қолмен жазыңыз.","Enter the date so the event shows up in the catalogue, then pick it. A webinar? Choose “Other” and type the name."],
+er4:["Неверный ID сотрудника","Қызметкердің ID қате","Wrong employee ID"],
+er4d:["Если у сотрудника несколько ID, выберите тот профиль, с которого сканировали QR. Иначе скан не отобразится при проверке.","Қызметкердің бірнеше ID болса, QR сканерленген профильді таңдаңыз. Әйтпесе тексеру кезінде скан көрінбейді.","If the employee has several IDs, choose the profile used to scan the QR, or the scan won't show up during review."],
+ch_t:["Чек-лист перед отправкой","Жіберу алдындағы чек-парақ","Pre-submission checklist"],
+ch_d:["Заявку подтвердят, только если выполнены все четыре условия.","Өтінім төрт шарттың бәрі орындалғанда ғана расталады.","The application is approved only if all four conditions are met."],
+ch_count:["Отмечено","Белгіленді","Checked"],
+c1:["Сканирование QR-кода зафиксировано в базе","QR-код сканерлеуі базада тіркелген","QR scan is recorded in the database"], c1s:["Сканировали до подачи заявки","Өтінім берер алдында сканерленді","Scanned before applying"],
+c2:["Сотрудник привязан к компании","Қызметкер компанияға тіркелген","Employee is linked to the company"], c2s:["На портале astanahub.com","astanahub.com порталында","On the astanahub.com portal"],
+c3:["Выбраны правильные мероприятие и дата","Дұрыс іс-шара мен күн таңдалған","Correct event and date selected"], c3s:["Для вебинара: «Другое» + название вручную","Вебинар үшін: «Басқа» + атауы қолмен","For a webinar: “Other” + name typed in"],
+c4:["Выбран правильный профиль (ФИО и ID)","Дұрыс профиль таңдалған (Аты-жөні және ID)","Correct profile selected (name and ID)"], c4s:["Тот, с которого было сканирование","Сканерлеу жасалған профиль","The one used for the scan"],
+ch_done:["✓ Всё готово — можно отправлять заявку!","✓ Бәрі дайын — өтінімді жіберуге болады!","✓ All set: you can submit the application!"],
+first_t:["Ваши первые шаги в Social Impact","Social Impact-тегі алғашқы қадамдарыңыз","Your first steps in Social Impact"],
+fs1:["Войдите в кабинет","Кабинетке кіріңіз","Log in"], fs1d:["На astanahub.com — раздел уже доступен участнику.","astanahub.com-да — бөлім қатысушыға қолжетімді.","On astanahub.com; the section is already available to members."],
+fs2:["Проверьте Лигу и План","Лига мен Жоспарды тексеріңіз","Check your League and Plan"], fs2d:["Во вкладке «Прогресс» — Лига, годовой План и Баланс.","«Прогресс» қойындысында — Лига, жылдық Жоспар және Баланс.","The “Progress” tab shows League, annual Plan and Balance."],
+fs3:["Выберите активности","Белсенділіктерді таңдаңыз","Choose activities"], fs3d:["Начните с простого — заполните профиль компании.","Қарапайымнан бастаңыз — компания профилін толтырыңыз.","Start simple: complete your company profile."],
+fs4:["Добавьте сотрудников","Қызметкерлерді қосыңыз","Add employees"], fs4d:["Чтобы команда тоже зарабатывала ST в общий Баланс.","Команда да ортақ Балансқа ST жинауы үшін.","So your team earns ST for the shared Balance too."],
+
+k_eyebrow:["Полезные ссылки","Пайдалы сілтемелер","Useful links"],
+k_title:["Остались вопросы?","Сұрақтарыңыз қалды ма?","Still have questions?"],
+k_rec:["рекомендация","ұсыныс","suggestion"],
+k_packs:["Идеи и готовые решения, носит рекомендательный характер","Идеялар мен дайын шешімдер, ұсыным сипатында","Ideas and ready-made options, for guidance only"],
+k_web:["Основные нюансы и частые вопросы","Негізгі нюанстар және жиі сұрақтар","Key details and frequent questions"],
+k_tg:["Официальный новостной канал для компаний-участников","Қатысушы компанияларға арналған ресми жаңалықтар арнасы","Official news channel for member companies"],
+k_mail:["Служба мониторинга Astana Hub","Astana Hub мониторинг қызметі","Astana Hub monitoring team"],
+k_phone:["Телефоны и мессенджер","Телефондар және мессенджер","Phone and messenger"],
+
+ig_title:["Social Impact в Instagram","Instagram-дағы Social Impact","Social Impact on Instagram"],
+ig_lead:["Короткие посты и видео — удобно переслать коллегам.","Қысқа посттар мен видеолар — әріптестерге жіберуге ыңғайлы.","Short posts and videos, easy to forward to colleagues."],
+k_car:["Карусель","Карусель","Carousel"], k_vid:["Видео","Видео","Video"], k_post:["Пост","Пост","Post"],
+ig1:["Лидеры лиг 2026","2026 лига көшбасшылары","2026 league leaders"], ig1s:["Кто впереди в Social Impact","Social Impact-те кім алда","Who's ahead in Social Impact"],
+ig2:["Digital Bridge закрывает План","Digital Bridge Жоспарды жабады","Digital Bridge counts toward your Plan"], ig2s:["Билет, стенд, спикерство","Билет, стенд, сөз сөйлеу","Ticket, booth, speaking"],
+ig3s:["Как прошла встреча резидентов","Резиденттер кездесуі қалай өтті","How the residents' meetup went"],
+ig4:["10 направлений: как получить ST","10 бағыт: ST қалай алуға болады","10 directions to earn ST"], ig4s:["Листайте карусель","Каруселді сырғытыңыз","Swipe the carousel"],
+ig5:["Что такое Social Impact","Social Impact деген не","What is Social Impact"], ig5s:["Объясняем за минуту","Бір минутта түсіндіреміз","Explained in a minute"],
+ig6:["Новости — в Telegram","Жаңалықтар — Telegram-да","News on Telegram"],
+ft:["Добро пожаловать в Astana Hub — вместе создаём будущее.","Astana Hub-қа қош келдіңіз — болашақты бірге құрамыз.","Welcome to Astana Hub. Let's build the future together."]
+};
+
+const SLIDES = [
+ {p:0,img:"step-02.jpg",t:["Зайдите на astanahub.com и нажмите «Войти».","astanahub.com сайтына кіріп, «Кіру» батырмасын басыңыз.","Go to astanahub.com and click “Log in”."]},
+ {p:0,img:"step-03.jpg",t:["Введите email или номер телефона, затем пароль — и «Продолжить».","Email немесе телефон нөмірін, содан кейін құпиясөзді енгізіп, «Жалғастыру» басыңыз.","Enter your email or phone, then your password, and click “Continue”."]},
+ {p:0,img:"step-04.jpg",t:["На главной странице портала нажмите на иконку своего профиля.","Порталдың басты бетінде профиль белгішесін басыңыз.","On the portal home page, click your profile icon."]},
+ {p:0,img:"step-05.jpg",t:["Нажмите на название своей компании → «Профиль компании».","Компанияңыздың атауын басыңыз → «Компания профилі».","Click your company name → “Company profile”."]},
+ {p:0,img:"step-06.jpg",t:["В профиле компании откройте вкладку «Права доступа».","Компания профилінде «Қол жеткізу құқықтары» қойындысын ашыңыз.","In the company profile, open the “Access rights” tab."]},
+ {p:0,img:"step-07.jpg",t:["Ознакомьтесь с ролями и нажмите «Пригласить участника».","Рөлдермен танысып, «Қатысушыны шақыру» батырмасын басыңыз.","Review the roles and click “Invite member”."]},
+ {p:0,img:"step-08.jpg",t:["Впишите email сотрудника, выберите роль и нажмите «Invite».","Қызметкердің email-ін жазып, рөлін таңдап, «Invite» басыңыз.","Enter the employee's email, choose a role and click “Invite”."]},
+ {p:1,img:"step-09.jpg",t:["Сотруднику придёт письмо с инструкцией — нажмите «Присоединиться».","Қызметкерге нұсқаулығы бар хат келеді — «Қосылу» батырмасын басыңыз.","The employee gets an email; click “Join”."]},
+ {p:1,img:"step-10.jpg",t:["Подтвердите согласие с правилами, введите email или телефон и завершите регистрацию.","Ережелермен келісімді растап, email немесе телефонды енгізіп, тіркелуді аяқтаңыз.","Accept the rules, enter your email or phone and finish registering."]},
+ {p:1,img:"step-11.jpg",t:["Нажмите на иконку профиля, подтвердите согласие с правилами — «Продолжить».","Профиль белгішесін басып, ережелермен келісімді растаңыз — «Жалғастыру».","Click your profile icon, accept the rules, click “Continue”."]},
+ {p:1,img:"step-12.jpg",t:["Нажмите «Добавить компанию», введите БИН своей компании — «Продолжить».","«Компания қосу» басып, компанияңыздың БСН-ін енгізіңіз — «Жалғастыру».","Click “Add company”, enter your company's BIN and click “Continue”."]},
+ {p:1,img:"step-13.jpg",t:["Найдите свою компанию → «Присоединиться» → «Отправить запрос». Теперь запрос должен подтвердить Директор.","Компанияңызды табыңыз → «Қосылу» → «Сұрау жіберу». Енді сұрауды Директор растауы керек.","Find your company → “Join” → “Send request”. Now the Director must approve it."]},
+ {p:2,img:"step-14.jpg",t:["В аккаунте Директора нажмите на иконку уведомлений → «Смотреть».","Директор аккаунтында хабарландыру белгішесін басыңыз → «Қарау».","In the Director's account, click the notifications icon → “View”."]},
+ {p:2,img:"step-15.jpg",t:["Примите запрос сотрудника, нажав «Принять».","«Қабылдау» батырмасын басып, қызметкердің сұрауын қабылдаңыз.","Approve the request by clicking “Accept”."]},
+ {p:2,img:"step-16.jpg",t:["Готово! Сотрудник добавлен — его ST идут в общий Баланс компании.","Дайын! Қызметкер қосылды — оның ST компанияның ортақ Балансына түседі.","Done! The employee is added; their ST go to the company Balance."]}
+];
+
+const LANGS=["ru","kz","en"]; let L=0, cur=0;
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+
+function setLang(code){
+  L=Math.max(0,LANGS.indexOf(code));
+  document.documentElement.lang = code==="kz"?"kk":code;
+  $$("[data-i]").forEach(el=>{const v=T[el.dataset.i]; if(v) el.textContent=v[L];});
+  $$(".lang button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.lang===code));
+  try{localStorage.setItem("si_lang",code)}catch(e){}
+  renderSlide(); updateCheck();
+}
+$$(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
+
+/* carousel */
+const dots=$("#dots");
+SLIDES.forEach((s,i)=>{const b=document.createElement("button"); b.setAttribute("aria-label",String(i+1)); if(i>0&&SLIDES[i-1].p!==s.p)b.className="sep"; b.onclick=()=>go(i); dots.appendChild(b);});
+SLIDES.forEach(s=>{const im=new Image(); im.src="img/"+s.img;}); // preload
+function go(i){cur=Math.max(0,Math.min(SLIDES.length-1,i)); renderSlide();}
+function renderSlide(){
+  const s=SLIDES[cur];
+  $("#slide").src="img/"+s.img; $("#slide").alt=s.t[L];
+  $("#caption").textContent=s.t[L];
+  $("#count").textContent=(cur+1)+" "+T.of[L]+" "+SLIDES.length;
+  $("#prev").disabled=cur===0; $("#next").disabled=cur===SLIDES.length-1;
+  [...dots.children].forEach((d,i)=>d.setAttribute("aria-current",i===cur));
+  $$(".phase").forEach(p=>p.setAttribute("aria-selected", +p.dataset.phase===s.p));
+}
+$("#prev").onclick=()=>go(cur-1); $("#next").onclick=()=>go(cur+1);
+$$(".phase").forEach(p=>p.onclick=()=>go(SLIDES.findIndex(s=>s.p===+p.dataset.phase)));
+let sx=null; const st=$("#stage");
+st.addEventListener("touchstart",e=>{sx=e.touches[0].clientX},{passive:true});
+st.addEventListener("touchend",e=>{if(sx===null)return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40)go(cur+(dx<0?1:-1)); sx=null;});
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){$("#lb").classList.remove("open");return;}
+  const r=st.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight)return;
+  if(e.key==="ArrowRight")go(cur+1); if(e.key==="ArrowLeft")go(cur-1);
+});
+$("#slide").onclick=()=>{$("#lbimg").src=$("#slide").src; $("#lb").classList.add("open");};
+$("#lb").onclick=()=>$("#lb").classList.remove("open");
+
+/* checklist */
+const boxes=$$("#check input");
+function updateCheck(){
+  const n=[...boxes].filter(b=>b.checked).length;
+  $("#barfill").style.width=(n/boxes.length*100)+"%";
+  $("#chcount").textContent=T.ch_count[L]+": "+n+" / "+boxes.length;
+  $("#check").classList.toggle("all",n===boxes.length);
+}
+boxes.forEach(b=>b.addEventListener("change",updateCheck));
+
+/* init */
+let start="ru";
+const q=new URLSearchParams(location.search).get("lang");
+if(LANGS.includes(q)) start=q; else { try{const s=localStorage.getItem("si_lang"); if(LANGS.includes(s)) start=s;}catch(e){} }
+setLang(start);
+</script>
+</body>
+</html>
